@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h3 class="logo">Your Recipe Book</h3>
+    <ul>
+      <li class="navlink">
+        <a href="recipes.html"><button>Recipes🍳</button></a>
+      </li>
+      <li class="navlink">
+        <a href="contact.html"><button>Contact📞</button></a>
+      </li>
+      <li class="navlink">
+        <a href="home.html"><button>Back to home</button></a>
+      </li>
+    </ul>
+  </nav>
+  
+  <main class="recipes-page">
+    <div class="sidebar">
+      <form id="add-recipe-form">
+        <label for="recipename">Recipe Name:</label><br>
+        <input type="text" id="rnamefield" name="recipename"><br>
+  
+        <label for="ingredients">Ingredients:</label><br>
+        <textarea id="ingredients" name="ingredients" rows="2" oninput="expandTextarea(this)"></textarea><br>
+
+        <label for="instructions">Instructions:</label><br>
+        <textarea id="instructions" name="instructions" rows="2" oninput="expandTextarea(this)"></textarea><br>
+
+        <label for="meal-type">Type:</label><br>
+        <input list="meal-type" id="meal-type-input">
+        <datalist name="meal-type" id="meal-type">
+          <option value="breakfast">breakfast</option>
+          <option value="lunch">lunch</option>
+          <option value="dinner">dinner</option>
+          <option value="dessert">dessert</option>
+        </datalist><br>
+  
+        <button type="submit">Add Recipe</button>
+      </form>
+    </div>
+  
+    <div class="main-content">
+      <hr class="divider">
+      <div class="recipes-header">
+        <h2>Your recipes</h2>
+        <div class="search-container" id="search-container">
+          <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search for a recipe" name="recipe-search">
+            <button type="submit">Search</button>
+          </form>
+        </div>
+        
+      </div>
+      <div class="recipe-card-container">
+        <div id="recipe-list"></div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>
+      Copyright &copy;2024<br>
+      Developed by <a href="https://github.com/iglittch">Tanya Jama👩🏿‍💻</a>
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
